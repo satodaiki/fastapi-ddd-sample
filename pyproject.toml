@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fastapi-ddd-sample"
+version = "0.1.0"
+description = ""
+authors = ["d.sato <neuralpocket@google.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.63.0"
+uvicorn = "^0.13.4"
+dependency-injector = "^4.31.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-v --capture=no"
+testpaths = [
+    "tests",
+]
